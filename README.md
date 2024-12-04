@@ -39,7 +39,7 @@ Pip (Python package installer)
 }
 Response:
 json
-Copy code
+
 {
   "message": "User created successfully!"
 }
@@ -47,14 +47,14 @@ Copy code
 Method: POST
 Body:
 json
-Copy code
+
 {
   "username": "user123",
   "password": "securepassword"
 }
 Response:
 json
-Copy code
+
 {
   "refresh": "refresh-token",
   "access": "access-token"
@@ -65,12 +65,11 @@ Query Params:
 name (optional) - The name of the anime.
 genre (optional) - The genre of the anime.
 Example Request:
-http
-Copy code
+
 GET /anime/search?name=Naruto&genre=Action
 Response:
 json
-Copy code
+
 {
   "id": 1234,
   "title": { "romaji": "Naruto" },
@@ -81,7 +80,7 @@ Copy code
 Method: GET
 Response:
 json
-Copy code
+
 {
   "genres": ["Action", "Comedy"]
 }
@@ -95,7 +94,7 @@ Copy code
 }
 Response:
 json
-Copy code
+
 {
   "message": "Preferences updated successfully!"
 }
