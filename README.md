@@ -34,27 +34,74 @@ Pip (Python package installer)
 - **Body**:
 ```json
 {
-"username": "testuser123",
-"password": "password123",
-"preferences": {"genres": ["Action", "Comedy"]},
-"watched_anime": ["Naruto"]
+  "username": "user123",
+  "password": "securepassword"
 }
-
 Response:
+json
+Copy code
 {
   "message": "User created successfully!"
 }
-
 2. Login (/auth/login)
 Method: POST
+Body:
+json
+Copy code
 {
-"username": "user123",
-"password": "securepassword"
+  "username": "user123",
+  "password": "securepassword"
 }
 Response:
+json
+Copy code
 {
-"refresh": "refresh-token",
-"access": "access-token"
+  "refresh": "refresh-token",
+  "access": "access-token"
 }
+3. Search Anime (/anime/search)
+Method: GET
+Query Params:
+name (optional) - The name of the anime.
+genre (optional) - The genre of the anime.
+Example Request:
+http
+Copy code
+GET /anime/search?name=Naruto&genre=Action
+Response:
+json
+Copy code
+{
+  "id": 1234,
+  "title": { "romaji": "Naruto" },
+  "genres": ["Action", "Adventure"],
+  "popularity": 8000
+}
+4. Get User Preferences (/user/preferences)
+Method: GET
+Response:
+json
+Copy code
+{
+  "genres": ["Action", "Comedy"]
+}
+5. Update User Preferences (/user/preferences)
+Method: POST
+Body:
+json
+Copy code
+{
+  "genres": ["Action", "Comedy", "Romance"]
+}
+Response:
+json
+Copy code
+{
+  "message": "Preferences updated successfully!"
+}
+
+
+
+
 
 
