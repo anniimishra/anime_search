@@ -1,4 +1,4 @@
-#Anime Recommendation System
+#**Anime Recommendation System**
 This is a backend project built with Django, Django Rest Framework (DRF), and PostgreSQL. The system integrates with the AniList GraphQL API to recommend anime based on user preferences such as genre, popularity, and previously watched anime. It also supports user registration, login (with JWT authentication), and allows users to manage their preferences.
 
 #Features
